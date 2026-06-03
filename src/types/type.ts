@@ -1,12 +1,17 @@
 export type MediaType = "movie" | "tv";
 
+export type SearchProps = {
+  OnSearch: (query: string) => void;
+  initialValue?: string;
+};
+
 export type Genre = {
   id: number;
   name: string;
 }
 
-export type MediaSummary = {
-  id: number;
+export type VideoProps = {
+  id: string | number;
   title: string;
   overview: string;
   release_date: string;
@@ -18,11 +23,11 @@ export type MediaSummary = {
   name?: string;
 };
 
-export type SavedMediaItem = MediaSummary & {
+export type SavedMediaItem = VideoProps & {
   mediaType: MediaType;
 };
 
-export type MediaDetails = MediaSummary & {
+export type MediaDetails = VideoProps & {
   genres?: Genre[];
   tagline?: string;
   status?: string;
@@ -59,7 +64,7 @@ export type TmdbResponse<T> = {
 
 export type VideoCardProps = {
   title: string;
-  items: MediaSummary[];
+  items: VideoProps[];
   mediaType: MediaType;
   emptyMessage?: string;
 };

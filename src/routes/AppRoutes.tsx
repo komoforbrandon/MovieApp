@@ -4,11 +4,13 @@ import MovieDetails from '../pages/MovieDetails'
 import Tvshow from '../pages/Tvshow'
 import Movie from '../pages/Movies'
 import Watchlist from '../pages/Watchlist'
+import PopularTv from '../pages/populartv'
 
 const routes = [
     { path: '/', element: <Home /> },
     { path: '/movies', element: <Movie /> },
     {path: '/tvshows', element: <Tvshow />},
+    {path: '/new-and-popular', element: <PopularTv />},
     {path: '/watchlist', element: <Watchlist />},
     {path: '/:type/:id', element: <MovieDetails />},
     {path: '*', element: <Home /> }
