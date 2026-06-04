@@ -9,12 +9,12 @@ export default function VideoCard({
 }: VideoCardProps) {
 const ImgUrl = `https://image.tmdb.org/t/p/w500${video.poster_path}`
   return (
-    <Link to={`/movie/${video.id}`} className="flex flex-col gap-2">
+    <Link to={`/movie/${video.id}`} className="flex w-45 flex-col gap-2">
       <div className="relative">
         <img
           src={ImgUrl}
           alt={video.title}
-          className="w-full h-48 object-cover rounded-md"
+          className="w-full  rounded-md"
         />
         <div className="absolute top-2 right-2">
           <button onClick={() => onToggleFavorite(video)}>

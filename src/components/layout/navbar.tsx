@@ -39,13 +39,13 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="block w-full">
-      <nav className="py-3 px-2 bg-black flex items-center shadow-xs shadow-red-500/10 justify-between md:py-4 md:px-4">
+    <header className="sticky top-0 z-50 backdrop-blur block w-full">
+      <nav className="sticky py-3 px-2 bg-black/80  flex items-center shadow-xs shadow-red-500/10 justify-between md:py-3 md:px-4">
         <div className="flex items-center">
           <Link to="/" className="text-2xl md:text-2xl uppercase font-bold text-red-600 md:mr-10">
             NetCineX
           </Link>
-          <div className="hidden text-gray-400 md:flex space-x-5">
+          <div className="hidden text-gray-400 font-[490] md:flex space-x-5">
             {navItems.map((item) => (
               <Link
                 key={item.name}

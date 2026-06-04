@@ -41,7 +41,7 @@ export default function SearchBar({
               className="text-white hover:text-gray-300 flex items-center"
               aria-label="Search"
             >
-              <Search size={23}/>
+              <Search size={22}/>
             </button>
             <input
               type="text"
@@ -54,10 +54,10 @@ export default function SearchBar({
         </form>
       ) : (
         <button
-          className="text-white hover:text-gray-300"
+          className="text-white hover:text-gray-300 my-2"
           onClick={() => setIsOpenSearch(true)}
         >
-          <Search size={23}/>
+          <Search size={22}/>
         </button>
       )}
     </>

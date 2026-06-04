@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <FavoritesProvider>
           <Navbar />
-          <main className="container mx-auto px-4 py-6 bg--(bg) min-h-screen">
+          <main className="  py-0 bg--(bg) min-h-screen">
             <AppRoutes />
           </main>
         </FavoritesProvider>

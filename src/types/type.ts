@@ -11,7 +11,7 @@ export type Genre = {
 }
 
 export type VideoProps = {
-  id: string | number;
+  id: string;
   title?: string;
   overview: string;
   release_date: string;

@@ -9,7 +9,7 @@ import PopularTv from '../pages/populartv'
 const routes = [
     { path: '/', element: <Home /> },
     { path: '/movies', element: <Movie /> },
-    {path: '/tvshows', element: <Tvshow />},
+    {path: '/tv-shows', element: <Tvshow />},
     {path: '/new-and-popular', element: <PopularTv />},
     {path: '/watchlist', element: <Watchlist />},
     {path: '/:type/:id', element: <MovieDetails />},
