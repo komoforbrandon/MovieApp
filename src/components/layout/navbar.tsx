@@ -61,7 +61,7 @@ export default function Navbar() {
         </div>
         <article className="flex items-center py-1 space-x-4">
           <div
-          className=" md:block"
+          className="md:block"
           >
             <SearchBar OnSearch={handleSearch} initialValue={searchTerm} />
           </div>
