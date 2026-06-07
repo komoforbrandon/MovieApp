@@ -40,7 +40,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur block w-full">
-      <nav className="sticky py-3 px-2 bg-black/80  flex items-center shadow-xs shadow-red-500/10 justify-between md:py-3 md:px-4">
+      <nav className="sticky py-3 px-2 bg-black/70  flex items-center shadow-xs shadow-red-500/10 justify-between md:py-3 md:px-4">
         <div className="flex items-center">
           <Link to="/" className="text-2xl md:text-2xl uppercase font-bold text-red-600 md:mr-10">
             NetCineX
@@ -65,7 +65,7 @@ export default function Navbar() {
           >
             <SearchBar OnSearch={handleSearch} initialValue={searchTerm} />
           </div>
-          <BellIcon className="hidden md:block" />
+          <BellIcon className="hidden md:block" color="rgb(180 64 68 / 0.8)" />
           <User className="hidden md:block" />
           <button
             className="rounded-md transition-colors hover:bg-amber-900/10 md:hidden"

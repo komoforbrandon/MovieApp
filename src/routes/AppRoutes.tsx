@@ -4,7 +4,7 @@ import MovieDetails from '../pages/MovieDetails'
 import Tvshow from '../pages/Tvshow'
 import Movie from '../pages/Movies'
 import Watchlist from '../pages/Watchlist'
-import PopularTv from '../pages/populartv'
+import PopularTv from '../pages/popular'
 
 const routes = [
     { path: '/', element: <Home /> },

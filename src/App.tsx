@@ -3,7 +3,7 @@ import Navbar from "./components/layout/navbar";
 import { BrowserRouter } from "react-router-dom";
 import { FavoritesProvider } from "./hooks/saveMovie";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
+// import Footer from "./components/layout/footer";
 const queryClient = new QueryClient();
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
             <AppRoutes />
           </main>
         </FavoritesProvider>
+        {/* <Footer /> */}
       </BrowserRouter>
     </QueryClientProvider>
   );

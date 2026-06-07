@@ -13,6 +13,12 @@ export const fetchTrendingTvShows = async () => {
    return data.results;
 }
 
+export const fetchNewRelease = async () => {
+  const response = await fetch(`${apiBaseUrl}/movie/now_playing?api_key=${apiKey}`);
+  const data = await response.json();
+  return data.results;
+}
+
 export const fetchMoviesByGenre = async (genreId: number) => {
   const response = await fetch(`${apiBaseUrl}/discover/movie?api_key=${apiKey}&with_genres=${genreId}&sort_by=popularity.desc`);
   const data = await response.json();
