@@ -76,7 +76,7 @@ export default function Navbar() {
         </article>
       </nav>
       {menuOpen && (
-        <div className="mx-auto flex max-w-6xl flex-col rounded-xl  p-2 shadow-sm backdrop-blur-sm md:hidden">
+        <div className="mx-auto flex max-w-6xl bg-black/70 flex-col  p-2 shadow-sm backdrop-blur-sm md:hidden">
           {navItems.map((item) => (
             <Link
               key={item.name}

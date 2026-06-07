@@ -19,6 +19,12 @@ export const fetchNewRelease = async () => {
   return data.results;
 }
 
+export const fetchPopularMovies = async () => {
+  const response = await fetch(`${apiBaseUrl}/movie/popular?api_key=${apiKey}&page=2`);
+  const data = await response.json();
+  return data.results;
+}
+
 export const fetchMoviesByGenre = async (genreId: number) => {
   const response = await fetch(`${apiBaseUrl}/discover/movie?api_key=${apiKey}&with_genres=${genreId}&sort_by=popularity.desc`);
   const data = await response.json();

@@ -1,13 +1,14 @@
 import type { VideoCardProps } from "../../types/type";
 import { Link } from "react-router-dom";
 import { BookmarkPlusIcon, Star } from "lucide-react";
+import failImg from "../../assets/loadfail.png"
 
 export default function VideoCard({
   video,
   isFavorite = false,
   onToggleFavorite,
 }: VideoCardProps) {
-  const ImgUrl = `https://image.tmdb.org/t/p/w500${video.poster_path}`;
+  const ImgUrl = video.poster_path? `https://image.tmdb.org/t/p/w500${video.poster_path}` : failImg;
   return (
     <Link to={`/movie/${video.id}`} className="group flex flex-col gap-2 ">
       <div className="relative z-0 w-44 md:w-46 h-fit overflow-hidden rounded-sm">
