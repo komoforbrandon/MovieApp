@@ -1,7 +1,7 @@
 export default function TvLoader() {
   return (
     <div className="no-scrollbar w-full">
-      <div className="grid grid-cols-2 md:grid-cols-5 xl:grid-cols-8 lg:grid-cols-8 gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-8 gap-5">
         {Array.from({ length: 16 }, (_, index) => (
           <div
             key={`movie-${index}`}
@@ -16,7 +16,6 @@ export default function TvLoader() {
                 </div>
                 <div className="h-7 w-14 shrink-0 animate-pulse rounded-full bg-amber-400/20" />
               </div>
-              <div className="h-4 w-20 animate-pulse rounded-full bg-slate-200 dark:bg-slate-800" />
             </div>
           </div>
         ))}

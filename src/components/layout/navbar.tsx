@@ -65,7 +65,7 @@ export default function Navbar() {
           >
             <SearchBar OnSearch={handleSearch} initialValue={searchTerm} />
           </div>
-          <BellIcon className="hidden md:block" color="rgb(180 64 68 / 0.8)" />
+          <BellIcon className="hidden md:block" color="rgb(254 226 226)" />
           <User className="hidden md:block" />
           <button
             className="rounded-md transition-colors hover:bg-amber-900/10 md:hidden"

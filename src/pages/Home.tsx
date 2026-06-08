@@ -71,7 +71,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="p-2 md:px-4 w-full overflow-y-scroll no-scrollbar">
+      <div className="p-2 md:px-4 w-full overflow-y-scroll no-scrollbar pb-4">
         <h1 className="text-2xl font-bold my-5">New Releases</h1>
         {releaseLoading && <MovieLoader />}
         <div className="overflow-y-scroll no-scrollbar">
