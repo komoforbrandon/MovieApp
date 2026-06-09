@@ -62,14 +62,14 @@ export default function HeroSection() {
         <p className="md:hidden leading-5 text-red-100 mb-3">{currentVideo.overview.slice(0, 110)}</p>
         <div className="flex justify-start">
           <Link
-            to={`/${currentVideo.media_type as string}/${currentVideo.id}`}
+            to={`/${(currentVideo.title?'movie':'tv-show') as string}/${currentVideo.id}`}
             className="bg-white text-black md:text-lg px-4 py-2 md:py-3 rounded-md flex items-center gap-2"
           >
             <Play className="w-6 h-6" fill="default" size={25}/>
             <span>Watch Now</span>
           </Link>
           <Link
-            to={`/movie/${currentVideo.id}`}
+            to={`/${(currentVideo.title?'movie':'tv-show') as string}/${currentVideo.id}`}
             className="bg-gray-800/70 text-white md:text-lg px-4 py-2 md:py-3 rounded-md flex items-center gap-2 ml-4"
           >
             <InfoIcon className="w-7 h-7"/>

@@ -7,7 +7,7 @@ export default function MovieLoader() {
             key={`movie-${index}`}
             className="w-44 md:w-46 h-fit overflow-hidden rounded-sm"
           >
-            <div className="h-42 animate-pulse bg-slate-200 md:h-70 dark:bg-slate-800" />
+            <div className="h-68 animate-pulse bg-slate-200 md:h-70 dark:bg-slate-800" />
             {/* <div className="space-y-3 p-4">
               <div className="flex items-start justify-between gap-3">
                 <div className="w-full space-y-2">

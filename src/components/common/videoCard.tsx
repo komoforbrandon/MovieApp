@@ -12,15 +12,15 @@ export default function VideoCard({
     ? `https://image.tmdb.org/t/p/w500${video.poster_path}`
     : failImg;
   return (
-    <Link to={`/movie/${video.id}`} className="group flex flex-col gap-2 ">
-      <div className="relative z-0 w-44 md:w-46 h-fit overflow-hidden rounded-sm">
+    <Link to={`/${(video.title?'movie':'tv-show') as string}/${video.id}`} className="group flex flex-col gap-2 ">
+      <div className="relative z-0 w-44 md:w-46 h-full overflow-hidden rounded-sm">
         <img
           src={ImgUrl}
           alt={video.title}
-          className="w-full  object-cover transition-transform duration-500 ease-out hover:scale-[1.2]"
+          className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-[1.2]"
         />
         <button
-          className="hidden group-hover:block absolute top-1 right-1 z-10 rounded-lg  p-1 shadow-sm  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+          className="hidden cursor-copy group-hover:block absolute top-1 right-1 z-10 rounded-lg  p-1 shadow-sm  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
           onClick={(e) => {
             e.preventDefault();
             e.stopPropagation();

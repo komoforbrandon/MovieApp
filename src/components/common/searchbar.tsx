@@ -47,8 +47,8 @@ export default function SearchBar({
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search for Movies, TV shows, and more..."
-              className="w-full focus:outline-none ml-2 text-gray-300 placeholder-gray-400 md:w-64"
+              placeholder="Search for movies, tv and more..."
+              className="w-full focus:outline-none ml-2 text-gray-300 placeholder-gray-300/50 md:w-64"
             />
           </div>
         </form>

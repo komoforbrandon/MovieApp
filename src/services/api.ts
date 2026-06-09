@@ -54,3 +54,21 @@ export const fetchMovieDetails = async (movieId: string) => {
   const data = await response.json();
   return data;
 }
+
+export const fetchTvShowDetails = async (tvShowId: string) => {
+  const response = await fetch(`${apiBaseUrl}/tv/${tvShowId}?api_key=${apiKey}`);
+  const data = await response.json();
+  return data;
+}
+
+export const fetchSimilarMovies = async (movieId: string) => {
+  const response = await fetch(`${apiBaseUrl}/movie/${movieId}/similar?api_key=${apiKey}`);
+  const data = await response.json();
+  return data.results;
+}
+
+export const fetchSimilarTvShows = async (tvShowId: string) => {
+  const response = await fetch(`${apiBaseUrl}/tv/${tvShowId}/similar?api_key=${apiKey}`);
+  const data = await response.json();
+  return data.results;
+}

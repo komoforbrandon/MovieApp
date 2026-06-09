@@ -11,6 +11,7 @@ export type Genre = {
 }
 
 export type VideoProps = {
+  adult?: boolean;
   id: string;
   title?: string;
   overview: string;
@@ -23,6 +24,16 @@ export type VideoProps = {
   name?: string;
   media_type: MediaType;
   original_language: string;
+  created_by?: Array<{ id: number; credit_id: string; name: string; profile_path: string | null }>;
+  production_companies?: Array<{ id: number; logo_path: string | null; name: string; origin_country: string }>;
+  spoken_language?: Array<{ english_name: string; iso_639_1: string; name: string }>;
+    last_episode_to_air?: {
+    name:string,
+    runtime: number, 
+  }
+  runtime?: number;
+  language?: string[]
+  genres?: Genre[];
 };
 
 export type VideoCardProps = {
@@ -33,22 +44,4 @@ export type VideoCardProps = {
 
 export type SavedMediaItem = VideoProps & {
   mediaType: MediaType;
-};
-
-export type MediaDetails = VideoProps & {
-  genres?: Genre[];
-  tagline?: string;
-  status?: string;
-  homepage?: string;
-  runtime?: number; // For movies
-  number_of_seasons?: number; // For TV shows
-  number_of_episodes?: number[]; // For TV shows
-  spoken_languages?: { english_name: string }[]; // For movies and TV shows
-  production_countries?: { name: string }[]; // For movies and TV shows
-};
-
-export type MovieDetailsCardProps = {
-  item: MediaDetails | null;
-  mediaType: MediaType;
-  onClose: () => void;
 };
