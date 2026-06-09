@@ -7,6 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 import VideoCard from "./videoCard";
 import MovieLoader from "./movieLoader";
 import Footer from "../layout/footer";
+import loadfail from "../../assets/loadfail.png";
 
 export default function VidDetailsCard({
   video,
@@ -28,21 +29,24 @@ export default function VidDetailsCard({
     },
  })
 
+const Imgsrc = video.poster_path
+    ? `https://image.tmdb.org/t/p/w500${video.poster_path}`
+    : loadfail;
 
   return (
     <div className="space-y-3">
       <div className="relative h-[50vh] md:h-[70vh] lg:h-[92vh]">
         <img
-          src={`https://image.tmdb.org/t/p/w1280${video.backdrop_path}`}
+          src={Imgsrc}
           alt={video.title || video.name}
           className="w-full h-full object-cover"
         />
         <div className="absolute top-0 bg-black/50 w-full h-full backdrop-blur-950/8 md:h-[70vh] lg:h-[92vh] lg:w-full z-30" />
-        <div className="absolute bottom-11  left-5 transform md:left-7 z-40">
+        <div className="absolute bottom-4 md:bottom-11  left-5 transform md:left-7 z-40">
           <h1 className="text-3xl font-bold md:font-extrabold text-white mb-3 md:text-6xl lg:text-8xl md:w-[85%] md:my-5 uppercase">
             {video.title || video.name}
           </h1>
-          <div className="flex items-center gap-3 md:gap-5">
+          <div className="flex flex-wrap items-center gap-3 md:gap-5">
             <span className="text-green-700">98% Match</span>
             <span className="text-white bg-gray-700/80 py-1 px-2">{new Date(video.release_date || video.first_air_date || "").getFullYear()}</span>
             <span className="text-white">PG-{video.adult ? "18" : "13"}</span>
@@ -55,7 +59,7 @@ export default function VidDetailsCard({
           <p className="md:hidden leading-5 text-red-100 mb-3">
             {video?.overview?.slice(0, 110)}
           </p>
-          <div className="flex items-center gap-3 space-y-3">
+          <div className="flex flex-wrap items-center gap-3 space-y-3">
             <div className="flex items-center gap-2">
                 <span className="text-red-200 uppercase">Director: </span>
                 <span className="text-white">{video.created_by?.[0]?.name ?? video.production_companies?.[0]?.name ?? "N/A"}</span>
@@ -66,7 +70,7 @@ export default function VidDetailsCard({
                 <span className="text-white">{video.genres?.map((genre) => genre.name).join(", ") ?? "N/A"}</span>
             </div>
           </div>
-          <div className="flex justify-start space-x-3">
+          <div className="flex flex-wrap justify-start gap-y-3 space-x-3">
             <Link
               to={`#`}
               className=" bg-linear-to-r from-red-600 to-pink-300 text-white md:text-lg px-4 py-2 md:py-3 rounded-md flex items-center gap-2"

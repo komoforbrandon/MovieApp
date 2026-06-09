@@ -43,7 +43,7 @@ export default function HeroSection() {
   if (!currentVideo) return null;
 
   return (
-    <div className="relative h-[50vh] md:h-[70vh] lg:h-[92vh]">
+    <div className="relative h-[45vh] md:h-[70vh] lg:h-[92vh]">
       <img
         src={`https://image.tmdb.org/t/p/w1280${currentVideo.backdrop_path}`}
         alt={currentVideo.title}
