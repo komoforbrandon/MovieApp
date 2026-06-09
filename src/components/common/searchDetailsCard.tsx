@@ -25,7 +25,7 @@ export default function SearchDetailsCard({queryTerm, queryData}: {queryTerm:str
   return  (
     <div className="p-2 md:p-4 space-y-2">
         <p className="uppercase text-red-200 text-lg">Search result for</p>
-        <h1 className="font-bold text-xl md:text-6xl pb-3">{queryTerm}</h1>
+        <h1 className="font-bold text-3xl md:text-6xl pb-3">{queryTerm}</h1>
         <div className="flex flex-wrap items-center gap-3 pb-4">
          {filterArray.map((item: {name:string,value:string})=>(
           <button onClick={(e)=>{
