@@ -31,7 +31,7 @@ export default function SearchDetailsCard({queryTerm, queryData}: {queryTerm:str
           <button onClick={(e)=>{
             e.preventDefault();
             setFilterby(item.value)
-          }} className={`px-3 py-1 text-[15px] flex items-center rounded-full uppercase  cursor-pointer text-red-200 bg-gray-800/60 ${filterby===item.value && "bg-red-500 text-white"}`}>{item.name}</button>
+          }} className={`px-2 md:px-4 py-1 text-[15px] flex items-center rounded-full uppercase  cursor-pointer text-red-200 bg-gray-800/60 ${filterby===item.value && "bg-red-500 text-white"}`}>{item.name}</button>
          ))}
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-8 gap-5">

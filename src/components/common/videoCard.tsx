@@ -13,7 +13,7 @@ export default function VideoCard({
     : failImg;
   return (
     <Link to={`/${(video.title?'movie':'tv-show') as string}/${video.id}`} className="group flex flex-col gap-2 ">
-      <div className="relative z-0 w-37 md:w-46 h-full overflow-hidden rounded-sm">
+      <div className="relative z-0 w-39 md:w-46 h-full overflow-hidden rounded-sm">
         <img
           src={ImgUrl}
           alt={video.title}
