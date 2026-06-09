@@ -31,6 +31,7 @@ export default function SearchBar({
           className="flex ml-6 items-center justify-center bg-gray-700/20 rounded-md  backdrop-blur-md transition-opacity duration-1000 ease-in-out"
           onSubmit={(event) => {
             event.preventDefault();
+            event.stopPropagation();
             handleSearch();
           }}
         >

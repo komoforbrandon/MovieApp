@@ -16,13 +16,7 @@ export default function Navbar() {
   const searchTerm = searchParams.get("query") ?? "";
 
   function getSearchPath() {
-    if (location.pathname.startsWith("/movies")) {
-      return "/movies/search";
-    } else if (location.pathname.startsWith("/tv-shows")) {
-      return "/tv-shows/search";
-    } else {
-      return "/search";
-    }
+    return "/search";
   }
 
   function handleSearch(query: string) {
