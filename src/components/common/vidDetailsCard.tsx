@@ -1,6 +1,6 @@
 import type { VideoProps, VideoCardProps } from "../../types/type";
 import { Link } from "react-router-dom";
-import { Play, PlusIcon,X, ThumbsUp, Tv } from "lucide-react";
+import { Play, PlusIcon,X, ThumbsUp, Tv , ArrowLeft} from "lucide-react";
 import { useState } from "react";
 import { fetchSimilarMovies, fetchSimilarTvShows } from "../../services/api";
 import { useQuery } from "@tanstack/react-query";
@@ -8,14 +8,15 @@ import VideoCard from "./videoCard";
 import MovieLoader from "./movieLoader";
 import Footer from "../layout/footer";
 import loadfail from "../../assets/loadfail.png";
+import { useNavigate } from "react-router-dom";
 
 export default function VidDetailsCard({
   video,
   isFavorite = false,
   onToggleFavorite,
 }: VideoCardProps) {
-  const [likeColor, setLikeColor] = useState(false);
-
+ const [likeColor, setLikeColor] = useState(false);
+ const navigate = useNavigate();
  const { data, isLoading } = useQuery({
     queryKey: ["similar-movies", video.id],
     queryFn: () => {
@@ -41,6 +42,12 @@ const Imgsrc = video.poster_path
           alt={video.title || video.name}
           className="w-full h-full object-cover"
         />
+        <div className="absolute top-2 left-3 md:left-5 md:top-4 rounded cursor-pointer z-40 bg-linear-to-r from-red-600 to-pink-300 text-white py-2 px-2 flex items-center gap-2 bg-linear-to-"
+        onClick={()=>navigate(-1)}
+        >
+          <ArrowLeft color="white" size={20} className="cursor-pointer" />
+           <span>Back</span>
+        </div> 
         <div className="absolute top-0 bg-black/50 w-full h-full backdrop-blur-950/8 md:h-[70vh] lg:h-[92vh] lg:w-full z-30" />
         <div className="absolute bottom-4 md:bottom-11  left-5 transform md:left-7 z-40">
           <h1 className="text-3xl font-bold md:font-extrabold text-white mb-3 md:text-6xl lg:text-8xl md:w-[85%] md:my-5 uppercase">
