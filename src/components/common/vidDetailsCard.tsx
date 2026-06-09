@@ -59,7 +59,7 @@ const Imgsrc = video.poster_path
           <p className="md:hidden leading-5 text-red-100 mb-3">
             {video?.overview?.slice(0, 110)}
           </p>
-          <div className="flex flex-wrap items-center gap-3 space-y-3">
+          <div className="flex flex-wrap items-center gap-2 md:gap-5">
             <div className="flex items-center gap-2">
                 <span className="text-red-200 uppercase">Director: </span>
                 <span className="text-white">{video.created_by?.[0]?.name ?? video.production_companies?.[0]?.name ?? "N/A"}</span>

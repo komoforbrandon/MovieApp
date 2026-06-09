@@ -12,6 +12,7 @@ export default function Watchlist() {
       <div className="p-2 md:p-4 space-y-3">
         <h1 className="font-bold text-xl md:text-4xl pb-3"><span className="border-b-2 border-red-500">My </span>List</h1>
         <p className="text-red-200 uppercase pb-3 md:pb-5">{favorites.length} titles saved</p>
+        <h1 className="font-bold text-xl md:text-2xl pb-3">Saved Movies</h1>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-8 gap-5">
           {favoriteMovies.map((movie: VideoProps) => (
             <VideoCard

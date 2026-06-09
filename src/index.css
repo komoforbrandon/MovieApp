@@ -1,9 +1,10 @@
 @import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
   --text: #ffffff;
   --text-h: #08060d;
-  --bg: #131010;
+  --bg: #0f0c0c;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
   --accent: #ff3b3b;
@@ -23,6 +24,7 @@
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
+  font-family: 'Inter', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
