@@ -1,12 +1,24 @@
-
+import AppRoutes from "./routes/AppRoutes";
+import Navbar from "./components/layout/navbar";
+import { BrowserRouter } from "react-router-dom";
+import { FavoritesProvider } from "./hooks/saveMovie";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+// import Footer from "./components/layout/footer";
+const queryClient = new QueryClient();
 function App() {
-
   return (
-    <>
-      <h1>Welcome to React with TypeScript!</h1>
-      <p>This is a simple React application using TypeScript.</p>
-    </>
-  )
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <FavoritesProvider>
+          <Navbar />
+          <main className="  py-0 bg--(bg) min-h-screen">
+            <AppRoutes />
+          </main>
+        </FavoritesProvider>
+        {/* <Footer /> */}
+      </BrowserRouter>
+    </QueryClientProvider>
+  );
 }
 
-export default App
+export default App;
