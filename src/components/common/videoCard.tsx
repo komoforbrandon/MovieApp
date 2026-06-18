@@ -26,11 +26,12 @@ export default function VideoCard({
         animate="hidden"
         whileHover="visible"
         whileTap="visible"
+        transition={{duration:0.25, ease:'easeOut'}}
       >
         <img
           src={ImgUrl}
           alt={video.title}
-          className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-[1.2]"
+          className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-[1.3]"
         />
         <motion.button
           variants={hoverVariants}
@@ -49,8 +50,8 @@ export default function VideoCard({
         </motion.button>
         <motion.div
           variants={hoverVariants}
-          transition={{ duration: 0.2 }}
-          className="px-2 absolute bottom-0 z-10 w-full bg-black/5 shadow-md text-left"
+          transition={{ duration: 0.25, ease: "easeOut" }}
+          className="px-2 absolute bottom-0 z-10 w-full bg-black/10 shadow-lg text-left"
         >
           <h2 className="text-sm font-semibold">{video.title || video.name}</h2>
           <p className="flex items-center gap-1 text-sm text-gray-200">

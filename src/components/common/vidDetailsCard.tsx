@@ -9,6 +9,7 @@ import MovieLoader from "./movieLoader";
 import Footer from "../layout/footer";
 import loadfail from "../../assets/loadfail.png";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function VidDetailsCard({
   video,
@@ -35,7 +36,12 @@ const Imgsrc = video.poster_path
     : loadfail;
 
   return (
-    <div className="space-y-3">
+    <motion.div
+    initial={{opacity:0, scale:0.90}} 
+    animate={{opacity:1, scale:1}}
+    exit={{ opacity: 0, scale: 0.90 }}
+    transition={{ duration: 0.25, ease: 'easeOut' }}
+    className="space-y-3">
       <div className="relative h-[53vh] md:h-[70vh] lg:h-[92vh]">
         <img
           src={Imgsrc}
@@ -130,6 +136,6 @@ const Imgsrc = video.poster_path
       <div className="">
         <Footer />
       </div>
-    </div>
+    </motion.div>
   );
 }
