@@ -66,7 +66,7 @@ export default function Home() {
           <h1 className="text-2xl font-bold my-5">Trending Now</h1>
           {trendLoading && <MovieLoader />}
           <div className="overflow-scroll no-scrollbar">
-            <div className="md:px-2 w-fit overlow-y-scroll flex gap-3">
+            <div className="md:px-2 w-fit overlow-y-scroll flex gap-3 md:gap-5">
               {trendingMovies?.map((movie: VideoProps) => (
                 <VideoCard
                   key={movie.id}
@@ -83,7 +83,7 @@ export default function Home() {
           <h1 className="text-2xl font-bold my-5">Popular Cinema Noir</h1>
           {trendingLoading && <MovieLoader />}
           <div className="overflow-scroll no-scrollbar">
-            <div className="px-2 w-fit overlow-y-scroll flex flex-row gap-3">
+            <div className="px-2 w-fit overlow-y-scroll flex flex-row gap-3 md:gap-5">
               {trendingTvShows?.map((tvshow: VideoProps) => (
                 <VideoCard
                   key={tvshow.id}
@@ -100,7 +100,7 @@ export default function Home() {
           <h1 className="text-2xl font-bold my-5">New Releases</h1>
           {releaseLoading && <MovieLoader />}
           <div className="overflow-y-scroll no-scrollbar">
-            <div className="px-2 w-fit overlow-y-scroll flex flex-row gap-3">
+            <div className="px-2 w-fit overlow-y-scroll flex flex-row gap-3 md:gap-5">
               {newRelease?.map((newrelease: VideoProps) => (
                 <VideoCard
                   key={newrelease.id}

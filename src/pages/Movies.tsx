@@ -41,7 +41,7 @@ export default function Movie() {
             <h1 className="font-bold text-lg md:text-2xl p-2 md:p-4">{genre.name}</h1>
             {query.isLoading && MovieLoader()}
             <div className="overflow-y-scroll no-scrollbar py-2">
-              <div className="px-2 w-fit overlow-y-scroll flex flex-row gap-4">
+              <div className="px-2 w-fit overlow-y-scroll flex flex-row gap-3 md:gap-5">
                 {query.data?.map((movie: VideoProps) => (
                   <VideoCard
                     key={movie.id}
